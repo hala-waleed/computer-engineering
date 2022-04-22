@@ -5,6 +5,7 @@ from math import pi, atan2
 x = int(input("please enter initial x coordinate ")) 
 y = int(input("please enter initial y coordinate "))
 A = int(input("please enter initial Angle "))
+N = int(input ("please enter the number of obstacles"))
 Tx= int(input("please enter x coordinate of the target ")) 
 Ty= int(input("please enter y coordinate of the target ")) 
 RobotShape = VehicleIcon ("/home/hala/Desktop/practice21/robot.png", scale = 3)
@@ -16,7 +17,11 @@ Robot = Bicycle(
 )
 Robot.init(plot = True)
 Robot._animation.update(Robot.x)
+map = LandmarkMap(N, 50)  
+map.plot()
 plt.pause(1)
+sensor = RangeBearingSensor(robot = Robot, map = map, animate = True)
+print('Sensor readings: \n', sensor.h(Robot.x))
 Target = [Tx,Ty] 
 TargetMarker = {
         "marker" : "D",
