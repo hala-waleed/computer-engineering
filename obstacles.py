@@ -2,6 +2,21 @@ import matplotlib.pyplot as plt
 from roboticstoolbox import Bicycle, RandomPath, VehicleIcon, RangeBearingSensor, LandmarkMap
 from math import pi, atan2
 
+
+def CheckObstacles(SensorReadings, Robot):
+        Risk = False
+        Obstacles = SensorReadings.h(Robot.x)
+        ObstaclesR = Obstacles[:, 0]
+        ObstaclesTheta = (Obstacles[:, 1] / pi) * 180
+        print('Obstacles Distances: ', ObstaclesR)
+        print('Obstacles Angles: ', ObstaclesTheta)
+        for i in range(len(ObstaclesR)):
+                if ObstaclesR[i] < 10:
+                        if abs(ObstaclesTheta[i]) < 45:
+                                print('We are at RISK!!!')
+                                Risk = True
+        return [Risk, ObstaclesR[i], ObstaclesTheta[i]]
+
 x = int(input("please enter initial x coordinate ")) 
 y = int(input("please enter initial y coordinate "))
 A = int(input("please enter initial Angle "))
@@ -41,6 +56,12 @@ while (flag):
                 flag = True
         else: 
                 flag = False
+        [Risk, ObsR, ObsA] = CheckObstacles(sensor, Robot)
+        if Risk:
+                if ObsA >= 0:
+                        SteeringAngle = SteeringAngle - (pi/4)
+                elif ObsA < 0:
+                        SteeringAngle = SteeringAngle + (pi/4)
         Robot.step(3,SteeringAngle)
         Robot._animation.update(Robot.x)
         plt.pause(0.005)
