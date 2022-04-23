@@ -106,7 +106,7 @@ plt.pause(10)
 
 
  # Flow chart 
-![Flow chart](images/flow.peg)
+![flow](images/flow.peg)
 
  
 
