@@ -13,16 +13,16 @@ Tx= int (input ("please enter x coordinate of the target "))
 Ty= int (input ("please enter y coordinate of the target ")
 The symbols beside each input resemble the input itself. Then we put the x and y axes so it’s plotted on the graph. After it, we put a certain angle that is 45 degrees for robot rotation and direction if there was an obstacle. Moreover, we wanted the robot to move around or between the obstacles without striking them and reach the target. Furthermore, we put a target for the robot on the x and y-axis to go. Then we start to put the values to get the output for the obstacle distance, sensor, obstacles for angels and if we are at risk. 
  
-Figure 1initail sensor readings ![](/images/fg1.peg)
+Figure 1initail sensor readings ![](images/fg1.peg)
 
            
-Figure 2: Readings during navigation with no RISK  ![](/images/fg2.peg)         Figure 3: Readings during navigation while there is a RISK  ![](/images/fg3.peg)
+Figure 2: Readings during navigation with no RISK  ![](images/fg2.peg)         Figure 3: Readings during navigation while there is a RISK  ![](images/fg3.peg)
  
  # Results 
 
 This is the video while the code is working, and the graph appears while the robot moves away from the obstacle. It shows the sensor readings and obstacles in the angle and distance. Also, it said the areas that are at risk
 
- ![](/images/results1.peg)
+ ![](images/results1.peg)
 
   
           
@@ -106,7 +106,7 @@ plt.pause(10)
 
 
  # Flow chart 
-![](/images/flow.peg)
+![](images/flow.peg)
 
  
 
