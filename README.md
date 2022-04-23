@@ -22,7 +22,7 @@ Figure 2: Readings during navigation with no RISK  ![](/images/fg2.peg)         
 
 This is the video while the code is working, and the graph appears while the robot moves away from the obstacle. It shows the sensor readings and obstacles in the angle and distance. Also, it said the areas that are at risk
 
- ![](/images/results3.peg)
+ ![](/images/results1.peg)
 
   
           
