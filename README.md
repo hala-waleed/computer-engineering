@@ -18,10 +18,10 @@ Figure 1initail sensor readings
            
 Figure 2: Readings during navigation with no RISK           Figure 3: Readings during navigation while there is a RISK
  
-Results 
+ # Results 
 
 This is the video while the code is working, and the graph appears while the robot moves away from the obstacle. It shows the sensor readings and obstacles in the angle and distance. Also, it said the areas that are at risk
-
+![](/images/
 
  
 
